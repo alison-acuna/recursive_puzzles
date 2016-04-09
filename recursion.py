@@ -1,8 +1,4 @@
 
-
-# quicksort
-
-
 # factorial - n!
 
 def fact(n):
@@ -50,3 +46,40 @@ def anagram(n):
 
 
 # selectionsort
+def selection_sort(n):
+    for x in range(len(n) -1, 0, -1):
+        positionOfMax=0
+        for location in range(1,x+1):
+            if n[location]>n[positionOfMax]:
+                positionOfMax = location
+        temp = n[x]
+        n[x] = n[positionOfMax]
+        n[positionOfMax] = temp
+
+    return n
+
+# quicksort
+
+
+def main(n):
+    pivot = random.choice(n)
+    print(pivot)
+    for x in range(0, len(n)):
+        if x > pivot:
+            b = x
+            print("b = {}".format(b))
+            return
+        elif x == pivot:
+            print("equal")
+            return
+    for i in reversed(range(0, len(n))):
+        if i < pivot:
+            a = i
+            print("a = {}".format(a))
+            return
+        elif i == pivot:
+            print("equal")
+            return
+
+
+main([4, 3,1, 2, 5])

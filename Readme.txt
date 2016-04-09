@@ -1,0 +1,1 @@
+This folder contains a series of puzzles playing with recursion.  The solution to all puzzles is in recursion.py for convenience.  Each folder has a test file and the puzzle.
